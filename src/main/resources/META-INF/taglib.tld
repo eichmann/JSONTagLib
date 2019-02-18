@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>2.1</tlib-version>
+	<short-name>JSONTagLib</short-name>
+	<uri>http://labs.cd2h.org/JSONTagLib</uri>
+
+	<tag>
+		<name>setAPI</name>
+		<tag-class>org.cd2h.JSONTagLib.SetAPITag</tag-class>
+		<body-content>JSP</body-content>
+
+		<attribute>
+			<name>API</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+
+    <tag>
+        <name>object</name>
+        <tag-class>org.cd2h.JSONTagLib.ObjectTag</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>queryName</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>targetName</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>array</name>
+        <tag-class>org.cd2h.JSONTagLib.ArrayTag</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>label</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>data</name>
+        <tag-class>org.cd2h.JSONTagLib.DataTag</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>label</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <function>
+        <name>isFirstArrayElement</name>
+        <function-class>org.cd2h.JSONTagLib.ArrayTag</function-class>
+        <function-signature>java.lang.Boolean isFirst()</function-signature>
+    </function>
+
+    <function>
+        <name>isLastArrayElement</name>
+        <function-class>org.cd2h.JSONTagLib.ArrayTag</function-class>
+        <function-signature>java.lang.Boolean isLast()</function-signature>
+    </function>
+</taglib>
